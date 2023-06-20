@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".view.DetailAnime">
+
+    <ImageView
+        android:id="@+id/ivA"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:onClick="back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_arrow_back_white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ivA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/ivPortada"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:scaleType="fitCenter" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/gray">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tvTituloD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Titulo Anime"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:background="@drawable/paper_background2"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvIdiomaJ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="idioma_japanesee"
+                        android:textSize="18dp"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="tipo"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    />
+                    <TextView
+                        android:id="@+id/tvFuente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="fuente"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:id="@+id/tvEpisodio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="episodios"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvRaiting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="raiting"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:id="@+id/tvPuntaje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="puntaje"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:id="@+id/tvRango"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="rango"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="año"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descripción"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvSinopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="detalle"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="150dp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>
